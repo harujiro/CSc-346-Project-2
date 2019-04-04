@@ -1,0 +1,141 @@
+/*
+Author: John Stockey
+Course: CSc 346
+Section: 1
+
+Style sheet for discuss service. Creates a header and styles post appearance
+and discussion thread appearances.
+*/
+body {
+    background-color: #C4C4C4;
+    margin: 0;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+fieldset {
+    border-style: none;
+    padding: 0px;
+}
+
+fieldset > p {
+    text-decoration: underline;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+button {
+    vertical-align: super;
+}
+
+ul {
+    list-style: none;
+    font-size: 24pt;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    padding-left: 0;
+    height: auto;
+}
+
+li {
+    padding: 5px;
+    word-break: break-all;
+}
+
+li + li {
+    border-top: 5px solid black;
+}
+
+#dynamic {
+    text-align: center;
+}
+
+#header {
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 2px solid #9B9B9B;
+    position: relative;
+}
+
+#header h1 {
+    position: absolute;
+    left: 5%;
+    margin: 0;
+    font-size: 36pt;
+    bottom: 0;
+}
+
+#home {
+    right: 5%;
+}
+
+#refresh {
+    right: 15%;
+}
+
+#home, #refresh {
+    border: 3px solid #5B5B5B;
+    background-color: #5B5B5B;
+    color: #FFFFFF;
+    padding: 2px;
+    position: absolute;
+    bottom: 10px;
+}
+
+#postDiv {
+    margin: 20px;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template: repeat(2, 100px) / repeat(2, 250px);
+    align-items: center;
+    font-size: 24pt;
+    word-break: break-all;
+}
+
+#postDiv > h3 {
+    border-bottom: 5px solid black;
+}
+
+#postDiv > h3, #postDiv > h3 + p {
+    height: 100%;
+    border-right: 5px solid black;
+    overflow: overlay;
+}
+
+#postDiv p + p {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    overflow: overlay;
+    height: 100%;
+}
+
+.discussion {
+    display: flex;
+    overflow: hidden;
+    margin: 20px;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+}
+
+.discussion > p {
+    margin: 0;
+    padding-top: 38px;
+    overflow: hidden;
+    border-right: 5px solid black;
+    font-size: 16pt;
+    width: 25%;
+}
+
+.discussion > h3 {
+    font-size: 24pt;
+    overflow: hidden;
+    width: 50%;
+}
